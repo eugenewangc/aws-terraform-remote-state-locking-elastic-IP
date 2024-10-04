@@ -1,4 +1,4 @@
-# docker-nginx-https-terraform-aws-setup
+# aws-terraform-remote-state-locking-elastic-IP
 
 ## ON console.aws.amazon.com ##
 #### Create S3 bucket and DynamoDB table ####
