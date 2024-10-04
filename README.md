@@ -30,39 +30,8 @@ Specify role_arn for assume_role with IAM-ROLE-ARN. </br>
 terraform init <br/>
 terraform apply
 
-<<<<<<< HEAD
 ## ON console.aws.amazon.com ##
 #### Verify Everything is Working ####
 - S3 bucket has a new directory: /your/path/to/key/
 - DynamoDB table has 1 new item.
 - EC2 instance is up and you can access it via the public AWS Elastic IP address.# aws-terraform-remote-state-locking-elastic-IP
-=======
-## On EC2 Instance Shell: ##
-
-#### COPY REQUIRED FILES TO EC2 INSTANCE ####
-- docker-compose.yml
-- html/index.nginx-debian.html
-- nginx/conf/app.conf
-- init-letsencrypt.sh
-
-#### MODIFY PARAMS: DOMAIN, EMAIL IN FILES ####
-- nginx/conf/app.conf
-- init-letsencrypt.sh
-
-#### INSTALL DOCKER ON EC2 INSTANCE ####
-sudo apt-get update<br/>
-sudo apt-get install ca-certificates curl<br/>
-sudo install -m 0755 -d /etc/apt/keyrings<br/>
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc<br/>
-sudo chmod a+r /etc/apt/keyrings/docker.asc<br/>
-echo \<br/>
-  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \<br/>
-  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \<br/>
-  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null<br/>
-sudo apt-get update<br/>
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin<br/>
-
-#### RUN BASH SCRIPT ####
-sudo chmod +x init-letsencrypt.sh <br/>
-sudo ./init-letsencrypt.sh
->>>>>>> parent of 173b04d (example setup)
